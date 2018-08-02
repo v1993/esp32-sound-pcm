@@ -1,5 +1,7 @@
 #include <soundProviderPcm.h>
 
+USING_NS_SOUND;
+
 SoundProviderPcm::SoundProviderPcm(const SoundData *dataarg, SoundPos lenarg, unsigned long int freqarg) {
 	data = dataarg;
 	freq = freqarg;
