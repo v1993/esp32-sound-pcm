@@ -20,5 +20,6 @@ void SoundProviderPcm::task_code() {
 	for (SoundPos i = 0; i < len; i++) {
 		postSample(data[i]);
 	}
+	while (uxQueueMessagesWaiting(queue) > 0) vTaskDelay(1);
 	postControl(END);
 }
